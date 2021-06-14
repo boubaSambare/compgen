@@ -1,4 +1,4 @@
-compgen
+rc-compgen
 =======
 
 generate react or react native component
@@ -15,11 +15,11 @@ generate react or react native component
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g compgen
+$ npm install -g rc-compgen
 $ compgen COMMAND
 running command...
 $ compgen (-v|--version|version)
-compgen/0.0.1 darwin-x64 node-v15.12.0
+rc-compgen/0.0.1 darwin-x64 node-v15.12.0
 $ compgen --help [COMMAND]
 USAGE
   $ compgen COMMAND
@@ -28,28 +28,31 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`compgen  [FILE]`](#compgen-hello-file)
+* [`compgen autocomplete [SHELL]`](#compgen-autocomplete-shell)
 * [`compgen help [COMMAND]`](#compgen-help-command)
 
-## `compgen  [FILE]`
+## `compgen autocomplete [SHELL]`
 
-describe the command here
+display autocomplete installation instructions
 
 ```
 USAGE
-  $ compgen hello [FILE]
+  $ compgen autocomplete [SHELL]
+
+ARGUMENTS
+  SHELL  shell type
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -r, --refresh-cache  Refresh cache (ignores displaying instructions)
 
-EXAMPLE
-  $ compgen hello
-  hello world from ./src/hello.ts!
+EXAMPLES
+  $ compgen autocomplete
+  $ compgen autocomplete bash
+  $ compgen autocomplete zsh
+  $ compgen autocomplete --refresh-cache
 ```
 
-_See code: [src/commands/hello.ts](https://github.com/boubaSambare/compgen/blob/v0.0.1/src/commands/hello.ts)_
+_See code: [@oclif/plugin-autocomplete](https://github.com/oclif/plugin-autocomplete/blob/v0.3.0/src/commands/autocomplete/index.ts)_
 
 ## `compgen help [COMMAND]`
 

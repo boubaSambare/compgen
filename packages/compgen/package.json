@@ -1,5 +1,5 @@
 {
-  "name": "compgen",
+  "name": "rc-compgen",
   "description": "generate react or react native component",
   "version": "0.0.1",
   "author": "Sambare Aboubacar",
