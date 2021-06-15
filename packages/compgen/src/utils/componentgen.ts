@@ -1,4 +1,8 @@
 import {Actions, PlopGeneratorConfig} from 'node-plop'
+import * as fs  from 'fs'
+import * as path from 'path'
+const project = path.join(__dirname, '../tsconfig.json')
+const dev = fs.existsSync(project)
 import * as inquirer from 'inquirer'
 
 inquirer.registerPrompt('directory', require('inquirer-directory'))
@@ -27,13 +31,13 @@ export const componentGenerator: PlopGeneratorConfig = {
   ],
   actions: data => {
     const answers = data as Answers
-    const componentPath = `${process.cwd()}/${answers.path}/{{${ComponentPropNames.componentName}}}`
+    const componentPath = `${process.cwd()}/${answers.path}/{{properCase ${ComponentPropNames.componentName}}}`
 
     const actions: Actions = [
       {
         type: 'add',
         path: `${componentPath}/index.tsx`,
-        templateFile: '../templates/react/index.ts.hbs',
+        templateFile: path.join(__dirname, '../templates/react/index.ts.hbs'),
         abortOnFail: true,
       },
     ]
