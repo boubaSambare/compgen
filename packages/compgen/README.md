@@ -19,7 +19,7 @@ $ npm install -g compgenrc
 $ compgenrc COMMAND
 running command...
 $ compgenrc (-v|--version|version)
-compgenrc/0.1.0 darwin-x64 node-v15.12.0
+compgenrc/0.1.1 darwin-x64 node-v15.12.0
 $ compgenrc --help [COMMAND]
 USAGE
   $ compgenrc COMMAND
