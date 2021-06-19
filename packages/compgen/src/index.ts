@@ -18,9 +18,14 @@ class Compgenrc extends Command {
 
   async run() {
     await Plop.launch({
-      cwd: process.cwd(),
       configPath: path.join(__dirname, `${dev ? 'plopfile.ts' : 'plopfile.js'}`),
-    }, env => run(env, undefined, false))
+    }, env =>  {
+      const options = {
+        ...env,
+        dest: process.cwd(),
+      }
+      return run(options, undefined, true)
+    })
   }
 }
 

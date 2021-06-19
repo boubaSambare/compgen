@@ -1,4 +1,4 @@
-rc-compgen
+compgenrc
 =======
 
 generate react or react native component
