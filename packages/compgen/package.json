@@ -10,11 +10,16 @@
   "dependencies": {
     "@oclif/command": "^1",
     "@oclif/config": "^1",
+    "@oclif/plugin-autocomplete": "^0.3.0",
     "@oclif/plugin-help": "^3",
+    "@oclif/plugin-warn-if-update-available": "^1.7.0",
     "chalk": "^4.1.1",
     "enquirer": "^2.3.6",
     "inquirer": "^8.1.0",
     "inquirer-directory": "^2.2.0",
+    "inquirer-fuzzy-path": "^2.3.0",
+    "inquirer-select-directory": "^1.2.0",
+    "minimist": "^1.2.5",
     "node-plop": "^0.26.2",
     "plop": "^2.7.4",
     "shelljs": "^0.8.4",
@@ -49,14 +54,22 @@
   ],
   "homepage": "https://github.com/boubaSambare/compgen",
   "keywords": [
-    "oclif"
+    "oclift",
+    "react",
+    "react native",
+    "nextjs",
+    "generator",
+    "component"
   ],
   "license": "MIT",
   "main": "lib/index.js",
   "oclif": {
+    "commands": "./lib/commands",
     "bin": "compgenrc",
     "plugins": [
-      "@oclif/plugin-help"
+      "@oclif/plugin-help",
+      "@oclif/plugin-warn-if-update-available",
+      "@oclif/plugin-autocomplete"
     ]
   },
   "repository": "boubaSambare/compgenrc",
