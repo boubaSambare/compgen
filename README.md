@@ -30,9 +30,9 @@ USAGE
 <!-- commands -->
 * [`compgenrc autocomplete [SHELL]`](#compgenrc-autocomplete-shell)
 * [`compgenrc help [COMMAND]`](#compgenrc-help-command)
-* [`compgenrc next [FILE]`](#compgenrc-next-file)
-* [`compgenrc react [FILE]`](#compgenrc-react-file)
-* [`compgenrc native [FILE]`](#compgenrc-native-file)
+* [`compgenrc next `](#compgenrc-next-file)
+* [`compgenrc react `](#compgenrc-react-file)
+* [`compgenrc native `](#compgenrc-native-file)
 
 ## `compgenrc autocomplete [SHELL]`
 
@@ -91,7 +91,7 @@ _See code: [src/commands/next.ts](https://github.com/boubaSambare/compgenrc/blob
 
 ## `compgenrc react `
 
-generate react and react native component
+generate react  component
 
 ```
 USAGE

@@ -1,5 +1,6 @@
 import {Command, flags} from '@oclif/command'
 import * as fs  from 'fs'
+import * as chalk from 'chalk'
 import {Plop, run} from 'plop'
 import * as path from 'path'
 const project = path.join(__dirname, '../../tsconfig.json')
@@ -17,6 +18,7 @@ class React extends Command {
   static args = [{name: 'file'}];
 
   async run() {
+    this.log(chalk.yellow('make sure you are in the root directory '))
     await Plop.launch({
       configPath: path.join(__dirname, `${dev ? '../react-plopfile.ts' : '../react-plopfile.js'}`),
     }, env =>  {

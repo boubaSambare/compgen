@@ -18,7 +18,7 @@ class Next extends Command {
   static args = [{name: 'file'}];
 
   async run() {
-    this.log(chalk.yellow('make sure are in your root directory'))
+    this.log(chalk.yellow('make sure you are in your root directory'))
     await Plop.launch({
       configPath: path.join(__dirname, `${dev ? '../next-plopfile.ts' : '../next-plopfile.js'}`),
     }, env =>  {
