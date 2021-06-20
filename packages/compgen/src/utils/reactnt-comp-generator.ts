@@ -1,13 +1,12 @@
 import {Actions, PlopGeneratorConfig} from 'node-plop'
 import * as fs  from 'fs'
 import * as path from 'path'
-import * as inquirer from 'inquirer';
-inquirer.registerPrompt('dir', require('inquirer-select-directory'));
+import * as inquirer from 'inquirer'
+inquirer.registerPrompt('dir', require('inquirer-select-directory'))
 
 export enum ComponentPropNames {
     componentName = 'componentName',
     path = 'path',
-    frameworkChoice= 'frameworkChoice',
     language= 'language',
 }
 
@@ -18,14 +17,8 @@ export const componentGenerator: PlopGeneratorConfig = {
   prompts: [
     {
       type: 'list',
-      name: ComponentPropNames.frameworkChoice,
-      message: 'choose the component type',
-      choices: ['react', 'nextjs', 'reactNative'],
-    },
-    {
-      type: 'list',
       name: ComponentPropNames.language,
-      message: 'language',
+      message: 'which language do you want to use?',
       choices: ['javascript', 'typescript'],
     },
     {
@@ -53,8 +46,8 @@ export const componentGenerator: PlopGeneratorConfig = {
     const actions: Actions = [
       {
         type: 'add',
-        path: `${componentPath}/${answers.language === 'typescipt'? 'index.tsx' : 'index.js'}`,
-        templateFile: path.join(__dirname, `../templates/react/${answers.language === 'typescipt'? 'index.ts.hbs' : 'index.js.hbs'}`),
+        path: `${componentPath}/${answers.language === 'typescipt' ? 'index.tsx' : 'index.js'}`,
+        templateFile: path.join(__dirname, `../templates/reactnative/${answers.language === 'typescipt' ? 'index.ts.hbs' : 'index.js.hbs'}`),
         abortOnFail: true,
       },
     ]

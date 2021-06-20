@@ -54,11 +54,17 @@
   ],
   "homepage": "https://github.com/boubaSambare/compgen",
   "keywords": [
-    "oclif"
+    "oclift",
+    "react",
+    "react native",
+    "nextjs",
+    "generator",
+    "component"
   ],
   "license": "MIT",
   "main": "lib/index.js",
   "oclif": {
+    "commands": "./lib/commands",
     "bin": "compgenrc",
     "plugins": [
       "@oclif/plugin-help",
