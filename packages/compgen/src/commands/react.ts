@@ -5,6 +5,9 @@ import {Plop, run} from 'plop'
 import * as path from 'path'
 const project = path.join(__dirname, '../../tsconfig.json')
 const dev = fs.existsSync(project)
+import * as inquirer from 'inquirer'
+
+
 
 class React extends Command {
   static description = 'generate react  component';
@@ -18,6 +21,7 @@ class React extends Command {
   static args = [{name: 'file'}];
 
   async run() {
+    inquirer.registerPrompt('dir', require('inquirer-directory'))
     this.log(chalk.yellow('make sure you are in the root directory '))
     await Plop.launch({
       configPath: path.join(__dirname, `${dev ? '../react-plopfile.ts' : '../react-plopfile.js'}`),

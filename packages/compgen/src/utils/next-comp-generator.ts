@@ -53,8 +53,8 @@ export const componentGenerator: PlopGeneratorConfig = {
     const actions: Actions = [
       {
         type: 'add',
-        path: `${componentPath}/${answers.language === 'typescipt' ? 'index.tsx' : 'index.js'}`,
-        templateFile: path.join(__dirname, `../templates/react/${answers.language === 'typescipt' ? 'index.ts.hbs' : 'index.js.hbs'}`),
+        path: `${componentPath}/${answers.language === 'typescript' ? 'index.tsx' : 'index.jsx'}`,
+        templateFile: path.join(__dirname, `../templates/react/${answers.language === 'typescript' ? 'index.ts.hbs' : 'index.js.hbs'}`),
         abortOnFail: true,
       },
     ]

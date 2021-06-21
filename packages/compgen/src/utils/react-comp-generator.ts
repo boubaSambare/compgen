@@ -1,8 +1,6 @@
 import {Actions, PlopGeneratorConfig} from 'node-plop'
 import * as fs  from 'fs'
 import * as path from 'path'
-import * as inquirer from 'inquirer'
-inquirer.registerPrompt('dir', require('inquirer-select-directory'))
 
 export enum ComponentPropNames {
     componentName = 'componentName',
@@ -31,7 +29,7 @@ export const componentGenerator: PlopGeneratorConfig = {
       type: 'dir',
       name: ComponentPropNames.path,
       message: 'where do you want it to be created?',
-      basePath: './src',
+      basePath: '..',
     } as any,
   ],
   actions: data => {
@@ -46,8 +44,8 @@ export const componentGenerator: PlopGeneratorConfig = {
     const actions: Actions = [
       {
         type: 'add',
-        path: `${componentPath}/${answers.language === 'typescipt' ? 'index.tsx' : 'index.js'}`,
-        templateFile: path.join(__dirname, `../templates/react/${answers.language === 'typescipt' ? 'index.ts.hbs' : 'index.js.hbs'}`),
+        path: `${componentPath}/${answers.language === 'typescript' ? 'index.tsx' : 'index.jsx'}`,
+        templateFile: path.join(__dirname, `../templates/react/${answers.language === 'typescript' ? 'index.ts.hbs' : 'index.js.hbs'}`),
         abortOnFail: true,
       },
     ]
