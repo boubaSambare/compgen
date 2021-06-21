@@ -70,7 +70,12 @@
       "@oclif/plugin-help",
       "@oclif/plugin-warn-if-update-available",
       "@oclif/plugin-autocomplete"
-    ]
+    ],
+    "warn-if-update-available": {
+      "timeoutInDays": 1,
+      "message": "<%= config.name %> update available from <%= chalk.greenBright(config.version) %> to <%= chalk.greenBright(latest) %>.",
+      "registry": "https://www.npmjs.com/package/compgenrc"
+    }
   },
   "repository": "boubaSambare/compgenrc",
   "scripts": {
