@@ -1,7 +1,7 @@
 {
   "name": "compgenrc",
   "description": "generate react nextjs and react native component",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "author": "Sambare Aboubacar",
   "bin": {
     "compgenrc": "./bin/run"
