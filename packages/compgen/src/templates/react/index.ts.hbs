@@ -4,6 +4,9 @@
 *
 */
 import * as React from 'react';
+{{#if wantCssModule}}
+import styles from '../../styles/{{properCase componentName}}.module.css';
+{{/if}}
 
 
 interface Props {}
