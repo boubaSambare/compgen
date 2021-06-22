@@ -1,8 +1,11 @@
 import {Actions, PlopGeneratorConfig} from 'node-plop'
 import * as fs  from 'fs'
 import * as path from 'path'
+import  Conf from 'conf'
 import * as inquirer from 'inquirer'
-inquirer.registerPrompt('dir', require('inquirer-select-directory'))
+inquirer.registerPrompt('dir', require('inquirer-directory'))
+
+const config = new Conf()
 
 export enum ComponentPropNames {
     componentName = 'componentName',
@@ -20,7 +23,8 @@ export const componentGenerator: PlopGeneratorConfig = {
       type: 'list',
       name: ComponentPropNames.language,
       message: 'which language do you want to use?',
-      choices: ['javascript', 'typescript'],
+      choices: ['javascript', new inquirer.Separator(), 'typescript'],
+      default: config.get('language') || 0,
     },
     {
       type: 'input',
@@ -33,6 +37,7 @@ export const componentGenerator: PlopGeneratorConfig = {
       name: ComponentPropNames.path,
       message: 'where do you want it to be created?',
       basePath: './src',
+      default: config.get('path') || '',
     } as any,
     {
       type: 'confirm',
@@ -65,6 +70,8 @@ export const componentGenerator: PlopGeneratorConfig = {
         templateFile: path.join(__dirname, '../templates/css-module/index.css.hbs'),
       })
     }
+    config.set('path', answers.path)
+    config.set('language', answers.language === 'javascript' ? 0 : 1)
     return actions
   },
 }
