@@ -19,7 +19,7 @@ $ npm install -g compgenrc
 $ compgenrc COMMAND
 running command...
 $ compgenrc (-v|--version|version)
-compgenrc/0.1.1 darwin-x64 node-v15.12.0
+compgenrc/0.2.0 darwin-x64 node-v15.12.0
 $ compgenrc --help [COMMAND]
 USAGE
   $ compgenrc COMMAND
@@ -30,9 +30,9 @@ USAGE
 <!-- commands -->
 * [`compgenrc autocomplete [SHELL]`](#compgenrc-autocomplete-shell)
 * [`compgenrc help [COMMAND]`](#compgenrc-help-command)
-* [`compgenrc next `](#compgenrc-next-file)
-* [`compgenrc react `](#compgenrc-react-file)
-* [`compgenrc native `](#compgenrc-native-file)
+* [`compgenrc native`](#compgenrc-native)
+* [`compgenrc next`](#compgenrc-next)
+* [`compgenrc react`](#compgenrc-react)
 
 ## `compgenrc autocomplete [SHELL]`
 
@@ -74,48 +74,48 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
 
-## `compgenrc next `
-
-generate next component
-
-```
-USAGE
-  $ compgenrc next 
-
-OPTIONS
-  -f, --force
-  -h, --help   show CLI help
-```
-
-_See code: [src/commands/next.ts](https://github.com/boubaSambare/compgenrc/blob/v0.1.1/src/commands/next.ts)_
-
-## `compgenrc react `
-
-generate react  component
-
-```
-USAGE
-  $ compgenrc react 
-
-OPTIONS
-  -f, --force
-  -h, --help   show CLI help
-```
-
-_See code: [src/commands/react.ts](https://github.com/boubaSambare/compgenrc/blob/v0.1.1/src/commands/react.ts)_
-
 ## `compgenrc native`
 
 generate react native component
 
 ```
 USAGE
-  $ compgenrc native 
+  $ compgenrc native
 
 OPTIONS
   -f, --force
-  -h, --help       show CLI help
+  -h, --help   show CLI help
 ```
 
-_See code: [src/commands/react-nt.ts](https://github.com/boubaSambare/compgenrc/blob/v0.1.1/src/commands/native.ts)_
+_See code: [src/commands/native.ts](https://github.com/boubaSambare/compgenrc/blob/v0.2.0/src/commands/native.ts)_
+
+## `compgenrc next`
+
+generate nextjs component
+
+```
+USAGE
+  $ compgenrc next
+
+OPTIONS
+  -f, --force
+  -h, --help   show CLI help
+```
+
+_See code: [src/commands/next.ts](https://github.com/boubaSambare/compgenrc/blob/v0.2.0/src/commands/next.ts)_
+
+## `compgenrc react`
+
+generate react  component
+
+```
+USAGE
+  $ compgenrc react
+
+OPTIONS
+  -f, --force
+  -h, --help   show CLI help
+```
+
+_See code: [src/commands/react.ts](https://github.com/boubaSambare/compgenrc/blob/v0.2.0/src/commands/react.ts)_
 <!-- commandsstop -->
