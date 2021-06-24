@@ -3,7 +3,6 @@ import * as fs  from 'fs'
 import * as path from 'path'
 import  Conf from 'conf'
 import * as inquirer from 'inquirer'
-inquirer.registerPrompt('dir', require('inquirer-directory'))
 
 const config = new Conf()
 
@@ -35,7 +34,7 @@ export const componentGenerator: PlopGeneratorConfig = {
       type: 'dir',
       name: ComponentPropNames.path,
       message: 'where do you want it to be created?',
-      basePath: './src',
+      basePath: '.',
       default: config.get('path') || '',
     } as any,
   ],

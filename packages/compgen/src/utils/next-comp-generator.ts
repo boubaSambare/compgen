@@ -1,20 +1,19 @@
 import {Actions, PlopGeneratorConfig} from 'node-plop'
-import * as fs  from 'fs'
+import * as fs from 'fs'
 import * as path from 'path'
-import  Conf from 'conf'
+import Conf from 'conf'
 import * as inquirer from 'inquirer'
-inquirer.registerPrompt('dir', require('inquirer-directory'))
 
 const config = new Conf()
 
 export enum ComponentPropNames {
-    componentName = 'componentName',
-    path = 'path',
-    language= 'language',
-    wantCssModule = 'wantCssModule',
+  componentName = 'componentName',
+  path = 'path',
+  language = 'language',
+  wantCssModule = 'wantCssModule',
 }
 
-type Answers = {[p in ComponentPropNames]: string}
+type Answers = { [p in ComponentPropNames]: string };
 
 export const componentGenerator: PlopGeneratorConfig = {
   description: 'Add a reat component',
@@ -36,7 +35,7 @@ export const componentGenerator: PlopGeneratorConfig = {
       type: 'dir',
       name: ComponentPropNames.path,
       message: 'where do you want it to be created?',
-      basePath: './src',
+      basePath: '.',
       default: config.get('path') || '',
     } as any,
     {
@@ -48,8 +47,12 @@ export const componentGenerator: PlopGeneratorConfig = {
   ],
   actions: data => {
     const answers = data as Answers
-    const componentPath = `${process.cwd()}/${answers.path}/{{properCase ${ComponentPropNames.componentName}}}`
-    const actualComponentPath = `${process.cwd()}/${answers.path}/${answers.componentName}`
+    const componentPath = `${process.cwd()}/${answers.path}/{{properCase ${
+      ComponentPropNames.componentName
+    }}}`
+    const actualComponentPath = `${process.cwd()}/${answers.path}/${
+      answers.componentName
+    }`
 
     if (fs.existsSync(actualComponentPath)) {
       throw new Error(`Component '${answers.componentName}' already exists`)
@@ -58,16 +61,28 @@ export const componentGenerator: PlopGeneratorConfig = {
     const actions: Actions = [
       {
         type: 'add',
-        path: `${componentPath}/${answers.language === 'typescript' ? 'index.tsx' : 'index.jsx'}`,
-        templateFile: path.join(__dirname, `../templates/react/${answers.language === 'typescript' ? 'index.ts.hbs' : 'index.js.hbs'}`),
+        path: `${componentPath}/${
+          answers.language === 'typescript' ? 'index.tsx' : 'index.jsx'
+        }`,
+        templateFile: path.join(
+          __dirname,
+          `../templates/react/${
+            answers.language === 'typescript' ? 'index.ts.hbs' : 'index.js.hbs'
+          }`
+        ),
         abortOnFail: true,
       },
     ]
     if (answers.wantCssModule) {
       actions.push({
         type: 'add',
-        path: `${process.cwd()}/styles/{{properCase ${ComponentPropNames.componentName}}}.module.css`,
-        templateFile: path.join(__dirname, '../templates/css-module/index.css.hbs'),
+        path: `${process.cwd()}/styles/{{properCase ${
+          ComponentPropNames.componentName
+        }}}.module.css`,
+        templateFile: path.join(
+          __dirname,
+          '../templates/css-module/index.css.hbs'
+        ),
       })
     }
     config.set('path', answers.path)
