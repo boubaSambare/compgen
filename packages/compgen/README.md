@@ -19,7 +19,7 @@ $ npm install -g compgenrc
 $ compgenrc COMMAND
 running command...
 $ compgenrc (-v|--version|version)
-compgenrc/0.2.0 darwin-x64 node-v15.12.0
+compgenrc/1.0.0 darwin-x64 node-v15.12.0
 $ compgenrc --help [COMMAND]
 USAGE
   $ compgenrc COMMAND
@@ -87,7 +87,7 @@ OPTIONS
   -h, --help   show CLI help
 ```
 
-_See code: [src/commands/native.ts](https://github.com/boubaSambare/compgenrc/blob/v0.2.0/src/commands/native.ts)_
+_See code: [src/commands/native.ts](https://github.com/boubaSambare/compgenrc/blob/v1.0.0/src/commands/native.ts)_
 
 ## `compgenrc next`
 
@@ -102,7 +102,7 @@ OPTIONS
   -h, --help   show CLI help
 ```
 
-_See code: [src/commands/next.ts](https://github.com/boubaSambare/compgenrc/blob/v0.2.0/src/commands/next.ts)_
+_See code: [src/commands/next.ts](https://github.com/boubaSambare/compgenrc/blob/v1.0.0/src/commands/next.ts)_
 
 ## `compgenrc react`
 
@@ -117,5 +117,5 @@ OPTIONS
   -h, --help   show CLI help
 ```
 
-_See code: [src/commands/react.ts](https://github.com/boubaSambare/compgenrc/blob/v0.2.0/src/commands/react.ts)_
+_See code: [src/commands/react.ts](https://github.com/boubaSambare/compgenrc/blob/v1.0.0/src/commands/react.ts)_
 <!-- commandsstop -->
