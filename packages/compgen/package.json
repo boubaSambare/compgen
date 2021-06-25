@@ -50,14 +50,15 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/boubaSambare/compgen",
+  "homepage": "https://github.com/boubaSambare/compgen/pakages/compgen",
   "keywords": [
-    "oclift",
+    "oclif",
     "react",
     "react native",
     "nextjs",
     "generator",
-    "component"
+    "component",
+    "compgenrc"
   ],
   "license": "MIT",
   "main": "lib/index.js",
@@ -72,10 +73,10 @@
     "warn-if-update-available": {
       "timeoutInDays": 1,
       "message": "<%= config.name %> update available from <%= chalk.greenBright(config.version) %> to <%= chalk.greenBright(latest) %>.",
-      "registry": "https://www.npmjs.com/package/compgenrc"
+      "registry": "https://registry.npmjs.org/compgenrc"
     }
   },
-  "repository": "boubaSambare/compgenrc",
+  "repository": "boubaSambare/compgenrchttps://github.com/boubaSambare/compgen/tree/main/packages/compgen",
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",
