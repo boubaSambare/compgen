@@ -18,11 +18,11 @@ easy generation of react nextjs and react native component from command line
 <!-- usage -->
 
 ```sh-session
-$ npm install -g compgenrc or npm install -D compgenrc
+$ npm install -g compgenrc
 $ compgenrc COMMAND
 running command...
 $ compgenrc (-v|--version|version)
-
+compgenrc/1.0.1 darwin-x64 node-v15.12.0
 $ compgenrc --help [COMMAND]
 USAGE
   $ compgenrc COMMAND

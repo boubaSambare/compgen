@@ -1,7 +1,6 @@
-compgenrc
-=======
+# compgenrc
 
-easy generation of  react nextjs and react native component from command line
+easy generation of react nextjs and react native component from command line
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/compgenrc.svg)](https://npmjs.org/package/compgenrc)
@@ -9,30 +8,38 @@ easy generation of  react nextjs and react native component from command line
 [![License](https://img.shields.io/npm/l/compgenrc.svg)](https://github.com/boubaSambare/compgen/blob/master/package.json)
 
 <!-- toc -->
-* [Usage](#usage)
-* [Commands](#commands)
+
+- [Usage](#usage)
+- [Commands](#commands)
 <!-- tocstop -->
+
 # Usage
+
 <!-- usage -->
+
 ```sh-session
 $ npm install -g compgenrc
 $ compgenrc COMMAND
 running command...
 $ compgenrc (-v|--version|version)
-compgenrc/1.0.0 darwin-x64 node-v15.12.0
+compgenrc/1.0.1 darwin-x64 node-v15.12.0
 $ compgenrc --help [COMMAND]
 USAGE
   $ compgenrc COMMAND
 ...
 ```
+
 <!-- usagestop -->
+
 # Commands
+
 <!-- commands -->
-* [`compgenrc autocomplete [SHELL]`](#compgenrc-autocomplete-shell)
-* [`compgenrc help [COMMAND]`](#compgenrc-help-command)
-* [`compgenrc native`](#compgenrc-native)
-* [`compgenrc next`](#compgenrc-next)
-* [`compgenrc react`](#compgenrc-react)
+
+- [`compgenrc autocomplete [SHELL]`](#compgenrc-autocomplete-shell)
+- [`compgenrc help [COMMAND]`](#compgenrc-help-command)
+- [`compgenrc native`](#compgenrc-native)
+- [`compgenrc next`](#compgenrc-next)
+- [`compgenrc react`](#compgenrc-react)
 
 ## `compgenrc autocomplete [SHELL]`
 
@@ -106,7 +113,7 @@ _See code: [src/commands/next.ts](https://github.com/boubaSambare/compgenrc/blob
 
 ## `compgenrc react`
 
-generate react  component
+generate react component
 
 ```
 USAGE
@@ -118,4 +125,5 @@ OPTIONS
 ```
 
 _See code: [src/commands/react.ts](https://github.com/boubaSambare/compgenrc/blob/v1.0.0/src/commands/react.ts)_
+
 <!-- commandsstop -->
