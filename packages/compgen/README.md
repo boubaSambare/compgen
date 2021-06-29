@@ -8,15 +8,14 @@ easy generation of react nextjs and react native component from command line
 [![License](https://img.shields.io/npm/l/compgenrc.svg)](https://github.com/boubaSambare/compgen/blob/master/package.json)
 
 <!-- toc -->
-
-- [Usage](#usage)
-- [Commands](#commands)
+* [compgenrc](#compgenrc)
+* [Usage](#usage)
+* [Commands](#commands)
 <!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
-
 ```sh-session
 $ npm install -g compgenrc
 $ compgenrc COMMAND
@@ -28,18 +27,16 @@ USAGE
   $ compgenrc COMMAND
 ...
 ```
-
 <!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
-
-- [`compgenrc autocomplete [SHELL]`](#compgenrc-autocomplete-shell)
-- [`compgenrc help [COMMAND]`](#compgenrc-help-command)
-- [`compgenrc native`](#compgenrc-native)
-- [`compgenrc next`](#compgenrc-next)
-- [`compgenrc react`](#compgenrc-react)
+* [`compgenrc autocomplete [SHELL]`](#compgenrc-autocomplete-shell)
+* [`compgenrc help [COMMAND]`](#compgenrc-help-command)
+* [`compgenrc native`](#compgenrc-native)
+* [`compgenrc next`](#compgenrc-next)
+* [`compgenrc react`](#compgenrc-react)
 
 ## `compgenrc autocomplete [SHELL]`
 
@@ -94,7 +91,7 @@ OPTIONS
   -h, --help   show CLI help
 ```
 
-_See code: [src/commands/native.ts](https://github.com/boubaSambare/compgenrc/blob/v1.0.0/src/commands/native.ts)_
+_See code: [src/commands/native.ts](https://github.com/boubaSambare/compgenrc/blob/v1.0.1/src/commands/native.ts)_
 
 ## `compgenrc next`
 
@@ -109,11 +106,11 @@ OPTIONS
   -h, --help   show CLI help
 ```
 
-_See code: [src/commands/next.ts](https://github.com/boubaSambare/compgenrc/blob/v1.0.0/src/commands/next.ts)_
+_See code: [src/commands/next.ts](https://github.com/boubaSambare/compgenrc/blob/v1.0.1/src/commands/next.ts)_
 
 ## `compgenrc react`
 
-generate react component
+generate react  component
 
 ```
 USAGE
@@ -124,6 +121,5 @@ OPTIONS
   -h, --help   show CLI help
 ```
 
-_See code: [src/commands/react.ts](https://github.com/boubaSambare/compgenrc/blob/v1.0.0/src/commands/react.ts)_
-
+_See code: [src/commands/react.ts](https://github.com/boubaSambare/compgenrc/blob/v1.0.1/src/commands/react.ts)_
 <!-- commandsstop -->

@@ -1,10 +1,10 @@
 import {expect, test} from '@oclif/test'
 
-describe('next', () => {
+describe('react', () => {
   test
   .stdout()
-  .command(['next'])
-  .it('run nextjs command', ctx => {
+  .command(['react'])
+  .it('run react command', ctx => {
     expect(ctx.stdout).to.contain('which language do you want to use?')
   })
 })

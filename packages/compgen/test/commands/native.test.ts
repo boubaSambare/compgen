@@ -1,10 +1,10 @@
 import {expect, test} from '@oclif/test'
 
-describe('next', () => {
+describe('native', () => {
   test
   .stdout()
-  .command(['next'])
-  .it('run nextjs command', ctx => {
+  .command(['native'])
+  .it('run native command', ctx => {
     expect(ctx.stdout).to.contain('which language do you want to use?')
   })
 })
