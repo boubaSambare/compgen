@@ -1,4 +1,4 @@
-![alt compgenrc](./blob/main/compgenrc.png)
+![alt compgenrc](./compgenrc.png)
 
 # compgenrc
 
