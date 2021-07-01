@@ -1,3 +1,5 @@
+![alt compgenrc](https://github.com/boubaSambare/compgen/blob/main/compgenrc.png raw=true)
+
 # compgenrc
 
 easy generation of react nextjs and react native component from command line
