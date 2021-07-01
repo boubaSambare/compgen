@@ -1,4 +1,4 @@
-![alt compgenrc](https://github.com/boubaSambare/compgen/blob/main/compgenrc.png raw=true)
+![alt compgenrc](./blob/main/compgenrc.png)
 
 # compgenrc
 
