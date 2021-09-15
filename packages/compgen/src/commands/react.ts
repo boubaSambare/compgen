@@ -6,6 +6,7 @@ class React extends Command {
   static description = 'generate react  component';
 
   async run() {
+    this.log(JSON.stringify(process.env.LANG, null, 2))
     this.log(chalk.yellow('make sure you are in the root directory '))
     await Plop.launch({
       configPath: path.join(__dirname, `${this.dev ? '../react-plopfile.ts' : '../react-plopfile.js'}`),
