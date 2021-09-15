@@ -11,6 +11,7 @@ export enum ComponentPropNames {
   path = 'path',
   language = 'language',
   wantCssModule = 'wantCssModule',
+  wantState = 'wantState',
 }
 
 type Answers = { [p in ComponentPropNames]: string };
@@ -30,6 +31,12 @@ export const componentGenerator: PlopGeneratorConfig = {
       name: ComponentPropNames.componentName,
       message: 'what should it be called?',
       default: 'Component',
+    },
+    {
+      type: 'confirm',
+      name: ComponentPropNames.wantState,
+      message: 'do you want to add a state?',
+      default: false,
     },
     {
       type: 'dir',

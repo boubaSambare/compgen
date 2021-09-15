@@ -12,6 +12,10 @@ import styles from '../../styles/{{properCase componentName}}.module.css';
 
 
 export function {{ properCase componentName }}(props) {
+    {{#if wantState}}
+   const [state, setState] = React.useState();
+   {{/if}}
+
 
     return(
         <div>{{ componentName}}</div>

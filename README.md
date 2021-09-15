@@ -2,7 +2,7 @@
 
 # compgenrc
 
-easy generation of react nextjs and react native component from command line
+Simple generator for React, React native and Nextjs Component from command line
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/compgenrc.svg)](https://npmjs.org/package/compgenrc)
