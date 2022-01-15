@@ -19,7 +19,7 @@
     "inquirer-directory": "^2.2.0",
     "node-plop": "^0.26.2",
     "plop": "^2.7.4",
-    "shelljs": "^0.8.4",
+    "shelljs": "^0.8.5",
     "tslib": "^1"
   },
   "devDependencies": {
